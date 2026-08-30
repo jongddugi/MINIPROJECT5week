@@ -14,7 +14,7 @@ HTML_DIR = RAW_DIR / 'html'
 LIST_CSV = RAW_DIR / 'policy_list.csv'
 
 def save_detail_html(policy_id: str, detail_url: str) -> str :
-    target = HTML_DIR / 'f{policy_id}.html'
+    target = HTML_DIR / f'{policy_id}.html'
 
     if target.exists():
         return 'skipped'
@@ -50,9 +50,9 @@ def main() -> None :
             time.sleep(SLEEP_SECONDS)
 
     print(
-        f'\n저장 {counts['saved']}건 ₩'
-        f'건너뜀 {counts['skipped']}건 ₩'
-        f'실패 {counts['failed']}건'
+        f'\n저장 {counts['saved']}건 /'
+        f' 건너뜀 {counts['skipped']}건 /'
+        f' 실패 {counts['failed']}건'
     )
 
     if failed_ids :
