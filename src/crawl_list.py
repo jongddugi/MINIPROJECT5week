@@ -67,7 +67,7 @@ def parse_list_page(html: str, source: str) -> list[dict[str, str]]:
             continue
 
         summary_tag = item.select_one('em')
-        district_tag = item.select_one('span.bg-prple')
+        district_tag = item.select_one('span.bg-purple')
 
         rows.append({
             'policy_id' : policy_id,
